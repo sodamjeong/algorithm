@@ -1,6 +1,5 @@
 n = []
 m = {}
-e = 0
 
 for i in range(10):
     a = int(input())
@@ -13,7 +12,4 @@ for num in n:
     else:
         m[num] += 1
 
-for k in m:
-    e += 1
-
-print(e)
+print(len(m))

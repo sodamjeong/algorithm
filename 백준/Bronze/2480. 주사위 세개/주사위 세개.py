@@ -1,10 +1,10 @@
-A, B, C = map(int,input().split())
+a, b, c = map(int,input().split())
+x = [a, b, c]
+y = sorted(x)
 
-if A == B == C:
-    print((A * 1000) + 10000)
-elif (A == B) or (A == C):
-    print((A * 100) + 1000)
-elif (B == C):
-    print((B * 100) + 1000)
+if len(set(x)) == 1:
+    print(10000 + (1000 * y[1]))
+elif len(set(x)) == 2 :
+    print(1000 + (100 * y[1]))
 else:
-    print(max(A,B,C) * 100)
+    print(100 * y[2])

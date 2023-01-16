@@ -1,5 +1,6 @@
-T = int(input())
 
-for i in range(T):
-    A, B = map(int,input().split())
-    print(A+B)
+t = int(input())
+
+for i in range(t):
+    a,b = map(int,input().split())
+    print(a+b)

@@ -1,9 +1,2 @@
-t = int(input())
-m = []
-
-for i in range(t):
-    n = int(input())
-    m.append(n)
-
-for x in sorted(m):
-    print(x)
+n = [int(input()) for i in range(int(input()))]
+print(*sorted(n),sep='\n')

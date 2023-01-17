@@ -1,8 +1,2 @@
-A = []
-
-for i in range(9):
-    a = int(input())
-    A.append(a)
-
-print(max(A)) 
-print(A.index(max(A))+1)
+print(m := max(a := [int(input()) for i in range(9)]))
+print(a.index(m)+1)

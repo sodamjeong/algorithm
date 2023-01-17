@@ -1,13 +1,12 @@
-X = int(input())
-Y = X
-n = 0
+n = int(input())
+m = n
+cnt = 0
 
-while True:
-    a = Y // 10
-    b = Y % 10
-    c = (a + b) % 10
-    Y = b * 10 + c
-    n += 1
-    if Y == X:
-        print(n)
+while 1:
+    a = m // 10
+    b = m % 10
+    m = (b * 10) + ((a + b) % 10)
+    cnt += 1
+    if m == n:
+        print(cnt)
         break

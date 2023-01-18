@@ -1,18 +1,6 @@
-a = input()
-b = ['c=', 'c-', 'd-', 'lj', 'nj', 's=', 'z=']
-n = 0
-m = 2
+n = input()
+m = ['c=', 'c-', 'dz=', 'd-', 'lj', 'nj', 's=', 'z=']
 
-x = a.replace('=','')
-y = x.replace('-','')
-z = 1
-
-while m < (len(y) + 1):
-    if y[n:m] not in b:
-        z += 1
-    n += 1
-    m += 1
-
-z -= a.count('dz=')
-
-print(z)
+for i in m:
+    n = n.replace(i,'1')
+print(len(n))

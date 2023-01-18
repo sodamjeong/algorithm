@@ -1,8 +1,2 @@
-m=[]
-
 for i in range(int(input())):
-    n = list(input().split())
-    for x in n:
-        m.append(x[::-1])
-    print(*m)
-    m=[]
+    print(*[s[::-1] for s in input().split()])

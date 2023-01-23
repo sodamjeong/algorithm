@@ -1,18 +1,6 @@
-import sys
-input = sys.stdin.readline
-
-def prime(i):
-    if i < 10:
-        if i in [2,3,5,7]:
-            return True
-    else:
-        for x in range(2,int(i**0.5)+1):
-            if i % x == 0:
-                return False
-        return True
-
-m,n = map(int,input().split())
-
-for i in range(m,n+1):
-    if prime(i):
+n, m = map(int, input().split())
+lst = list(range(m + 1))
+for i in lst[2:]:
+    if lst[i] >= n:
         print(i)
+    lst[i::i] = m//i * [0]

@@ -1,15 +1,15 @@
 for i in range(int(input())):
     n = input()
-    cnt = 0
-    for x in n:
-        if x == '(':
-            cnt += 1
-        elif x == ')':
-            cnt += -1
-            if cnt < 0:
-                print('NO')
-                break
-    if cnt == 0:
-        print('YES')
-    elif cnt > 0:
+    m = []
+    try:
+        for x in n:
+            if x == '(':
+                m.append(x)
+            else:
+                m.pop()
+        if len(m) == 0:
+            print('YES')
+        else:
+            print('NO')
+    except IndexError:
         print('NO')

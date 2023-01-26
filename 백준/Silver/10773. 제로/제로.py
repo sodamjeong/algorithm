@@ -1,3 +1,6 @@
+import sys
+input = sys.stdin.readline
+
 n = []
 for i in range(int(input())):
     m = int(input())

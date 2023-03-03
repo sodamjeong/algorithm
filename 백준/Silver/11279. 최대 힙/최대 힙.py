@@ -7,8 +7,8 @@ for _ in range(int(input())):
     n = int(input())
     if n == 0:
         if len(heap) > 0:
-            print(heapq.heappop(heap)[1])
+            print(heapq.heappop(heap)*-1)
         else:
             print(0)
     else:
-        heapq.heappush(heap,(-n,n))
+        heapq.heappush(heap,-n)

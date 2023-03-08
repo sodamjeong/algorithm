@@ -2,16 +2,7 @@ import sys
 input = sys.stdin.readline
 
 a,b = map(int,input().split())
-name = {}
-lst = []
-
-for i in range(a+b):
-    n = input().strip()
-    if n not in name:
-        name[n] = 1
-    else:
-        name[n] += 1
-for k,v in name.items():
-    if v==2:
-        lst.append(k)
+p1 = [input().strip() for _ in range(a)]
+p2 = [input().strip() for _ in range(b)]
+lst = set(p1)&set(p2)
 print(len(lst),*sorted(lst),sep='\n')

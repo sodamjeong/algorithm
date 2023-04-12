@@ -14,9 +14,8 @@ def solution(maps):
                 if 0 <= xd < n and 0 <= yd < m and maps[xd][yd] == 1:
                         maps[xd][yd] = maps[x][y] + 1
                         queue.append((xd,yd))
-        return maps[n-1][m-1]
+        if maps[-1][-1] == 1:
+            return -1
+        return maps[-1][-1]
     answer = bfs(0,0)
-    if answer == 1:
-        return -1
-    else:
-        return answer
+    return answer

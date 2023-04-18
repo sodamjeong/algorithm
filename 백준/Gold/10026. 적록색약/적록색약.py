@@ -5,7 +5,7 @@ n = int(input())
 paint = [input() for _ in range(n)]
 paint2 = []
 visit = [[0]*n for _ in range(n)]
-
+queue = deque()
 
 for i in paint:
     j = i.replace('R','G')
@@ -22,8 +22,7 @@ def bfs(x, y, z):
                 if z[xd][yd] == z[x][y] and visit[xd][yd] == 0:
                     visit[xd][yd] = 1
                     queue.append((xd,yd))
-cnt = 0   
-queue = deque()                 
+cnt = 0                    
 for x in range(n):
     for y in range(n):
         if visit[x][y] == 0:
@@ -33,7 +32,6 @@ for x in range(n):
 visit = [[0]*n for _ in range(n)]
 
 cnt2 = 0
-queue = deque()
 for x in range(n):
     for y in range(n):
         if visit[x][y] == 0:

@@ -1,2 +1,2 @@
 # algorithm
-Baekjoon Hub
+Algorithm Hub

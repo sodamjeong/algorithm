@@ -1,10 +1,11 @@
-def hanoi(n,start,end,assi):
+def hanoi(n,s,m,e):
     if n == 1:
-        print(start,end)
-        return
-    hanoi(n-1,start,assi,end)
-    print(start,end)
-    hanoi(n-1,assi,end,start)
+        print(s,e)
+    else:
+        hanoi(n-1,s,e,m)
+        print(s,e)
+        hanoi(n-1,m,s,e)
+
 n = int(input())
 print(2**n-1)
-hanoi(n,1,3,2)  
+hanoi(n,1,2,3)

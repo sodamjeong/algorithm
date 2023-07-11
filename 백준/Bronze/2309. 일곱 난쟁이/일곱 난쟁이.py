@@ -1,19 +1,14 @@
-data=[]
-one=0
-two=0
+lst=[int(input()) for _ in range(9)]
+n,m = 0,0
 
-for _ in range(9):
-  data.append(int(input()))
-  
-sum_val=sum(data)
+total = sum(lst)
 for i in range(8):
   for j in range(i+1, 9):
-    if sum_val-(data[i]+data[j])==100:
-      one=data[i]
-      two=data[j]
-data.remove(one)
-data.remove(two)
-data.sort()
+    if total-(lst[i]+lst[j])==100:
+      n,m=lst[i],lst[j]
+lst.remove(n)
+lst.remove(m)
+lst.sort()
 
-for i in data:
+for i in lst:
   print(i)

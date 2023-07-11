@@ -1,19 +1,20 @@
 import sys
-N = int(sys.stdin.readline())
-graph = [list(map(int, sys.stdin.readline().split())) for _ in range(N)]
-count = {-1: 0, 0: 0, 1: 0}
+input = sys.stdin.readline
+n = int(input())
+graph = [list(map(int, input().split())) for _ in range(n)]
+cnt = {-1: 0, 0: 0, 1: 0}
 
 
-def divide(length, x, y):
+def divide(leng, x, y):
     start = graph[x][y]
-    for i in range(x, x + length):
-        for j in range(y, y + length):
+    for i in range(x, x + leng):
+        for j in range(y, y + leng):
             if start != graph[i][j]:
-                for nx in range(x, x + length, length // 3):
-                    for ny in range(y, y + length, length // 3):
-                        divide(length // 3, nx, ny)
+                for nx in range(x, x + leng, leng // 3):
+                    for ny in range(y, y + leng, leng // 3):
+                        divide(leng // 3, nx, ny)
                 return
-    count[start] += 1
+    cnt[start] += 1
 
-divide(N, 0, 0)
-print('\n'.join(map(str, count.values())))
+divide(n, 0, 0)
+print('\n'.join(map(str, cnt.values())))

@@ -3,12 +3,7 @@ input = sys.stdin.readline
 
 n=int(input())
 ans=[1]*n
-lst=[]
-for i in range(n):
-    a,b=map(int,input().split())
-    lst.append([a,b])
-
-lst=sorted(lst)
+lst=sorted([list(map(int,input().split())) for _ in range(n)])
 
 for i in range(1,n):
     for j in range(0,i):

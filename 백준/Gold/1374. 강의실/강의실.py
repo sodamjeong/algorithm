@@ -10,8 +10,7 @@ for _ in range(n):
     num, start, end = map(int,input().split())
     heapq.heappush(heap, [start,end])
 
-start, end = heapq.heappop(heap)
-heapq.heappush(que, end)
+heapq.heappush(que, heapq.heappop(heap)[1])
 
 while heap:
     start, end = heapq.heappop(heap)
